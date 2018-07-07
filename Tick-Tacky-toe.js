@@ -1,5 +1,5 @@
-var currentPlayer = "XD";
-var nextPlayer = "LOL";
+var currentPlayer = "Keenan";
+var nextPlayer = "Chloe";
 
 var playerXSelections = new Array();
 var playerOSelections = new Array();
@@ -19,18 +19,18 @@ const winningCombinations = [
 handleClick = function (event) {
     var cell = event.target
 
-    if (cell.innerHTML.includes("XD") || cell.innerHTML.includes("LOL")) {
+    if (cell.innerHTML.includes("Keenan") || cell.innerHTML.includes("Chloe")) {
       return false;
     }
 
     cell.innerHTML = currentPlayer;
 
-    if(currentPlayer === "XD" ) {
+    if(currentPlayer === "Keenan" ) {
       playerSelections = playerXSelections;
-      nextPlayer = "LOL";
+      nextPlayer = "Chloe";
     } else {
       playerSelections = playerOSelections;
-      nextPlayer = "XD";
+      nextPlayer = "Keenan";
     }
   
     playerSelections.push(parseInt(cell.id));
